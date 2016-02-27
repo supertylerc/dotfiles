@@ -21,6 +21,9 @@ if [[ -s "${HOME}/.local/bin/virtualenvwrapper.sh" ]]; then
   source ~/.local/bin/virtualenvwrapper.sh
 fi
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"
+if [[ -s /usr/local/share/gem_home/gem_home.sh ]]; then
+  source /usr/local/share/gem_home/gem_home.sh
+fi
 
 alias rm="nocorrect rm"
 alias cp="nocorrect cp"
