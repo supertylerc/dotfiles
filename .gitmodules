@@ -1,0 +1,3 @@
+[submodule ".janus/greenbar"]
+	path = .janus/greenbar
+	url = https://github.com/jodosha/vim-greenbar.git
