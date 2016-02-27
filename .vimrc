@@ -28,6 +28,16 @@ syntax on
 " Indicate cursor location
 set cursorline
 
+" Highlight search results
+set hlsearch
+" Matching bracket
+set showmatch
+
+" allow yy, etc. to interact with OS X clipboard
+" shamelessly pulled from
+" https://github.com/geerlingguy/dotfiles/blob/master/.vimrc
+set clipboard=unnamed
+
 " Keep 3 lines for context
 set scrolloff=3
 

@@ -1,0 +1,22 @@
+[user]
+  name = Tyler Christiansen
+  email = code@tylerc.me
+[core]
+  editor = vi
+  excludesfile = ~/.gitignore
+[commit]
+  template = ~/.gitmessage
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[web]
+  browser = google-chrome
+[credential]
+  helper = osxkeychain
+[push]
+  default = simple
+[alias]
+  log = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+
