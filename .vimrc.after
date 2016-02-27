@@ -1,0 +1,2 @@
+:map <leader>r :!greenbar bundle exec ruby<cr>
+:map <leader>re :!greenbar bundle exec rspec %<cr>
