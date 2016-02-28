@@ -17,6 +17,14 @@
   helper = osxkeychain
 [push]
   default = simple
+[help]
+  autocorrect = 1
 [alias]
-  log = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
-
+  l = log --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit
+  s = status -s
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  contributors = shortlog --summary --numbered
