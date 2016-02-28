@@ -1,5 +1,7 @@
-:map <leader>r :!greenbar bundle exec ruby<cr>
-:map <leader>re :!greenbar bundle exec rspec %<cr>
+" Keymappings for green-red-refactor
+map <leader>r :!~/.janus/greenbar/bin/greenbar bundle exec ruby<cr>
+map <leader>re :!~/.janus/greenbar/bin/greenbar bundle exec rspec %<cr>
+
 color brogrammer
 " Key mappings
 "" Map NerdTree to F2
