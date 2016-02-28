@@ -1,3 +1,6 @@
 [submodule ".janus/greenbar"]
 	path = .janus/greenbar
 	url = https://github.com/jodosha/vim-greenbar.git
+[submodule ".janus/brogrammer-theme"]
+	path = .janus/brogrammer-theme
+	url = https://github.com/marciomazza/vim-brogrammer-theme
