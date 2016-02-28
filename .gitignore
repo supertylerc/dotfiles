@@ -1,3 +1,8 @@
 *.DS_Store
 *.LSOverride
+
+# Thumbnail cache
+._*
 Thumbs.db
+
+*.pyc
