@@ -38,6 +38,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Show status line
+set laststatus=2
+
 " Highlight characters past column 79 in Python
 augroup vimrc_autocmds
   autocmd!
@@ -53,5 +56,3 @@ augroup vimrc_autocmds
   autocmd FileType ruby match Excess /\%79v.\+/
   autocmd FileType ruby set nowrap
   augroup END
-
-
