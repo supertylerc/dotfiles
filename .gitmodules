@@ -4,3 +4,6 @@
 [submodule ".janus/brogrammer-theme"]
 	path = .janus/brogrammer-theme
 	url = https://github.com/marciomazza/vim-brogrammer-theme
+[submodule ".janus/tmux-navigator"]
+	path = .janus/tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator

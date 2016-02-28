@@ -1,3 +1,55 @@
 :map <leader>r :!greenbar bundle exec ruby<cr>
 :map <leader>re :!greenbar bundle exec rspec %<cr>
 color brogrammer
+" Key mappings
+"" Map NerdTree to F2
+map <F2> :NERDTreeToggle<CR>
+"" Toggle display of whitespace
+nmap <leader>l :set list!<CR>
+"" Toggle relative line numbers
+nmap <C-N><C-N> :set invrelativenumber<CR>
+"" Sane split navigation (better tmux integration, too)
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Highlight active line
+set cursorline
+" Matching bracket
+set showmatch
+
+" allow yy, etc. to interact with OS X clipboard
+" shamelessly pulled from
+" https://github.com/geerlingguy/dotfiles/blob/master/.vimrc
+set clipboard=unnamed
+
+" Keep 3 lines for context
+set scrolloff=3
+
+" Case sensitivity
+set ignorecase
+set smartcase
+
+" Spaces > Tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Highlight characters past column 79 in Python
+augroup vimrc_autocmds
+  autocmd!
+  autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
+  autocmd FileType python match Excess /\%79v.\+/
+  autocmd FileType python set nowrap
+  augroup END
+
+" Highlight characters past column 99 in Ruby
+augroup vimrc_autocmds
+  autocmd!
+  autocmd FileType ruby highlight Excess ctermbg=DarkGrey guibg=Black
+  autocmd FileType ruby match Excess /\%79v.\+/
+  autocmd FileType ruby set nowrap
+  augroup END
+
+
