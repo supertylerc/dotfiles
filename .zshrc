@@ -24,6 +24,7 @@ fi
 if [[ -s /usr/local/share/gem_home/gem_home.sh ]]; then
   source /usr/local/share/gem_home/gem_home.sh
 fi
+[[ -s "${HOME}/.functions" ]] && source "${HOME}/.functions"
 
 alias rm="nocorrect rm"
 alias cp="nocorrect cp"
