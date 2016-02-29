@@ -26,8 +26,4 @@ if [[ -s /usr/local/share/gem_home/gem_home.sh ]]; then
 fi
 [[ -s "${HOME}/.functions" ]] && source "${HOME}/.functions"
 [[ -s "${HOME}/.secrets" ]] && source "${HOME}/.secrets"
-
-alias rm="nocorrect rm"
-alias cp="nocorrect cp"
-alias wip="nocorrect git commit -a -m WIP"
-alias squish="nocorrect git status && git commit -a --amend -C HEAD"
+[[ -s "${HOME}/.aliases" ]] && source "${HOME}/.aliases"
