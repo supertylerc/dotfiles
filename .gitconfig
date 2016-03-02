@@ -2,7 +2,7 @@
   name = Tyler Christiansen
   email = code@tylerc.me
 [core]
-  editor = vi
+  editor = vim
   excludesfile = ~/.gitignore
 [commit]
   template = ~/.gitmessage
