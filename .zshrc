@@ -24,6 +24,10 @@ fi
 if [[ -s /usr/local/share/gem_home/gem_home.sh ]]; then
   source /usr/local/share/gem_home/gem_home.sh
 fi
+[[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
 [[ -s "${HOME}/.functions" ]] && source "${HOME}/.functions"
 [[ -s "${HOME}/.secrets" ]] && source "${HOME}/.secrets"
 [[ -s "${HOME}/.aliases" ]] && source "${HOME}/.aliases"
+
+# Add RVM to PATH for scripting
+[[ -d "${HOME}/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
