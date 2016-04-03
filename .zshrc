@@ -15,6 +15,7 @@ fi
 export WORKON_HOME="~/.virtualenvs"
 export TERM="xterm-256color"
 export EDITOR=vim
+export VISUAL=vim
 
 # Includes
 if [[ -s "${HOME}/.local/bin/virtualenvwrapper.sh" ]]; then
@@ -29,5 +30,8 @@ fi
 [[ -s "${HOME}/.secrets" ]] && source "${HOME}/.secrets"
 [[ -s "${HOME}/.aliases" ]] && source "${HOME}/.aliases"
 
+# Setup Docker on Mac
+(( $+commands[docker-machine] )) && eval $(docker-machine env default)
+
 # Add RVM to PATH for scripting
-[[ -d "${HOME}/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
+[[ -d "${HOME}/.rvm/bin" ]] && export PATH="$HOME/.rvm/bin:$PATH"
