@@ -31,7 +31,7 @@ fi
 [[ -s "${HOME}/.aliases" ]] && source "${HOME}/.aliases"
 
 # Setup Docker on Mac
-(( $+commands[docker-machine] )) && docker-machine start default
+(( $+commands[docker-machine] )) && docker-machine start default > /dev/null 2>&1
 (( $+commands[docker-machine] )) && eval $(docker-machine env default)
 
 # Add RVM to PATH for scripting
