@@ -12,7 +12,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Exports
-export WORKON_HOME="~/.virtualenvs"
+export WORKON_HOME="${HOME}/.virtualenvs"
 export TERM="xterm-256color"
 export EDITOR=vim
 export VISUAL=vim
