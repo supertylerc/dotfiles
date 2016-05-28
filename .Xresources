@@ -1,0 +1,3 @@
+*background: #0f0f0f
+*foreground: #c8c8c8
+URxvt.font: xft:DroidSansMono:size=24
