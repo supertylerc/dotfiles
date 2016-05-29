@@ -29,3 +29,4 @@ fi
 exec fluxbox
 # or if you want to keep a log:
 # exec fluxbox -log "/home/tyler/.fluxbox/log"
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources

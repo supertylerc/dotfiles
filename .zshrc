@@ -36,3 +36,4 @@ fi
 
 # Add RVM to PATH for scripting
 [[ -d "${HOME}/.rvm/bin" ]] && export PATH="$HOME/.rvm/bin:$PATH"
+[[ -z "${DISPLAY}" ]] && [[ $(tty) == /dev/tty1 ]] && startx
