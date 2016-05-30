@@ -26,7 +26,7 @@ fi
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 exec fluxbox
 # or if you want to keep a log:
 # exec fluxbox -log "/home/tyler/.fluxbox/log"
-[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
