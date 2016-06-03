@@ -2,5 +2,4 @@ alias rm="nocorrect rm"
 alias cp="nocorrect cp"
 alias wip="nocorrect git commit -a -m WIP"
 alias squish="nocorrect git status && git commit -a --amend -C HEAD"
-alias dev="nocorrect cd ~/Dropbox/Development && ls -a"
 alias docker-clean='nocorrect docker rm -v $(docker ps -a -q -f status=exited); docker rmi $(docker images -f "dangling=true" -q)'

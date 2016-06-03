@@ -38,3 +38,22 @@ function json() {
     python -mjson.tool | pygmentize -l javascript;
   fi
 }
+
+# Automatically source environment variables when entering a directory
+function cd() {
+  builtin cd "$@" && source .env_vars > /dev/null 2>&1 || return 0
+}
+
+# Move to a dev environment
+function dev() {
+  dev_path=~/Dropbox/Development
+  if [[ $# -eq 1 ]]; then
+    new_path="${dev_path}/${1}"
+    if [[ -d "${new_path}" ]]; then
+      dev_path="${new_path}"
+    else
+      echo "Warning: Directory doesn't exist.  Changing to ${dev_path} instead."
+    fi
+  fi
+  cd $dev_path && ls -a
+}
