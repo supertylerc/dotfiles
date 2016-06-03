@@ -3,7 +3,7 @@
   email = code@tylerc.me
 [core]
   editor = vim
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/tylerchristiansen/.gitignore
 [commit]
   template = ~/.gitmessage
 [color]
