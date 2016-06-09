@@ -57,3 +57,26 @@ function dev() {
   fi
   cd $dev_path && ls -a
 }
+
+function aclgen() {
+  # This function overrides the `aclgen` script that's installed.  Call
+  # it with:
+  #   command aclgen
+  # if you need to call it directly instead of this function.
+  # Usage:
+  #   aclgen policy-name
+  policy="${1}"
+  if [[ ! -d policies ]] && [[ ! -d def ]]; then
+    echo 'Unable to find the policies and def directories.'
+    return 1
+  fi
+  if [[ "${policy}" == "list" ]]; then
+    ls policies/
+    return 0
+  fi
+  if [[ "${policy}" == "all" ]]; then
+    command aclgen --format=yml --shade_checking
+    return 0
+  fi
+  command aclgen -p policies/"${policy}".yml --format=yml --shade_checking
+}

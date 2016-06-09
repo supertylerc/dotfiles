@@ -16,6 +16,7 @@ export WORKON_HOME="${HOME}/.virtualenvs"
 export TERM="xterm-256color"
 export EDITOR=vim
 export VISUAL=vim
+[[ -d ~/.nvm ]] && export NVM_DIR=~/.nvm
 
 # Includes
 if [[ -s "${HOME}/.local/bin/virtualenvwrapper.sh" ]]; then
@@ -34,6 +35,10 @@ fi
 (( $+commands[docker-machine] )) && docker-machine start default > /dev/null 2>&1
 (( $+commands[docker-machine] )) && eval $(docker-machine env default)
 
+# NVM
+[[ -d ~/.nvm ]] && hash brew && source $(brew --prefix nvm)/nvm.sh
+
 # Add RVM to PATH for scripting
 [[ -d "${HOME}/.rvm/bin" ]] && export PATH="$HOME/.rvm/bin:$PATH"
 [[ -z "${DISPLAY}" ]] && [[ $(tty) == /dev/tty1 ]] && startx
+

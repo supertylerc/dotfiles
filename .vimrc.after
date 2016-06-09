@@ -55,11 +55,15 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-let g:syntastic_python_checkers=['flake8', 'python']
+let g:syntastic_python_checkers = ['flake8', 'python', 'pylint']
 
 
 """ YAML
 autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 autocmd BufNewFile,BufRead *.sls setlocal ft=yaml
+let g:syntastic_yaml_checkers = ['yamllint']
 
-
+""" Cisco ACLs
+augroup filetype
+  au! BufRead,BufNewFile *.nacl set filetype=ciscoacl
+augroup END
