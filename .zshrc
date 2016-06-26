@@ -31,10 +31,6 @@ fi
 [[ -s "${HOME}/.secrets" ]] && source "${HOME}/.secrets"
 [[ -s "${HOME}/.aliases" ]] && source "${HOME}/.aliases"
 
-# Setup Docker on Mac
-(( $+commands[docker-machine] )) && docker-machine start default > /dev/null 2>&1
-(( $+commands[docker-machine] )) && eval $(docker-machine env default)
-
 # NVM
 [[ -d ~/.nvm ]] && hash brew && source $(brew --prefix nvm)/nvm.sh
 
