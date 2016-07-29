@@ -29,3 +29,6 @@
 ehthumbs.db
 *.LSOverride
 Thumbs.db
+
+# atom.io imdone folders
+.imdone
